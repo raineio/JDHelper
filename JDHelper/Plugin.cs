@@ -5,6 +5,7 @@ using SiraUtil;
 using IPA;
 using IPALogger = IPA.Logging.Logger;
 using SiraUtil.Zenject;
+using JDHelper.Installers;
 
 namespace JDHelper
 {
@@ -17,6 +18,13 @@ namespace JDHelper
         public void Init(Zenjector zenjector ,IPALogger logger)
         {
             Logger = logger;
+            
+            zenjector.Install<MenuInstaller>(Location.App);
         }
+    }
+
+    public class Config
+    {
+        
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Zenject;
 
-namespace Colors.Installers
+namespace JDHelper.Installers
 {
     internal class MenuInstaller : Installer
     {
