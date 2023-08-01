@@ -3,17 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using 
-
-namespace Colors.AffinityPatches
+namespace JDHelper.AffinityPatches
 {
     [AffinityPatch]
     internal class HalfJumpDistancePatch
     {
         [AffinityPostfix]
-        public void Postfix()
+        public void Postfix(ref BeatmapObjectSpawnMovementData movementData)
         {
-
+            
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Colors.AffinityPatches;
+﻿using JDHelper.AffinityPatches;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,14 +8,15 @@ namespace JDHelper.Installers
 {
     internal class MenuInstaller : Installer
     {
-        public MenuInstaller()
-        {
 
-        }
+        public MenuInstaller()
+        {   }
 
         public override void InstallBindings()
         {
-            Container.BindInterfacesAndSelfTo<HalfJumpDistancePatch>().AsSingle();
+            // Will make sure this works when I get UI to work
+            // Container.BindInterfacesAndSelfTo<HalfJumpDistancePatch>().AsSingle();
+            Container.BindInterfacesAndSelfTo<JumpDistanceViewController>().AsSingle();
         }
     }
 }
