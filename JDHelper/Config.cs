@@ -15,8 +15,7 @@ namespace JDHelper
         public virtual bool ShowReactionTime { get; set; } = true;
         public virtual bool UseReactionTime { get; set; } = false;
 
-        public virtual float BaseJumpDistance { get; set; }
-        public virtual float NewJumpDistance { get; set; } = 16f;
+        public virtual float JumpDistance { get; set; } = 16f;
 
         [UseConverter(typeof(ListConverter<JumpDistancePreference>))]
         public virtual List<JumpDistancePreference> PreferredJumpDistanceValue { get; set; } = new List<JumpDistancePreference>();

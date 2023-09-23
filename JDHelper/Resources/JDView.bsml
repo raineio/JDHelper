@@ -1,21 +1,23 @@
 ﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
 	<vertical pad-bottom='15' child-expand-height='false' preferred-height='80' spacing='0'>
-		<toggle-setting text='Enable JDHelper' />
-		<text text="~jd"/>
-		<text text="~rt"/>
+		<toggle-setting apply-on-change='true' text='Enable JDHelper' value='mod-enabled'/>
+		<text text='~jd-text'/>
+		<text text='~rt-text'/>
 
 		<toggle-setting text="Disable during Noodle Maps" />
 	</vertical>
 	<vertical pad-top="15">
-		<horizontal child-expand-width="false">
+		<horizontal child-expand-width="false" spacing="2">
 			<action-button text="Enter JD" on-click="keyModal" hover-hint="Click to enter desired JD" />
-			<button text="Revert to base JD" on-click="setActive" hover-hint="Revert to the Jump Distance set by the mapper." active="~activityStatus" />
+			<button text="Revert to base JD" hover-hint="Revert to the Jump Distance set by the mapper." on-click="set-to-default"/>
 		</horizontal>
 	</vertical>
 
-	<modal id="jdModal" clickerino-offerino-closerino="true" move-to-center="true" size-delta-x="40" size-delta-y="20">
-		<vertical bg="round-rect-panel" child-expand-width="false"> 
-			<string-setting id="" text="Enter desired JD..." />
+	<modal id="jdModal" clickerino-offerino-closerino="true" move-to-center="true" size-delta-x="70" size-delta-y="40">
+		<vertical preferred-width='65' preferred-height='35' anchor-pos-y='0'> 
+			<string-setting apply-on-change='true' value="jdInput" text="Enter desired JD..."/>
+			<text text="~expected-range"/>
+			<text text="~recommended-rt"/>
 			<button text="Apply" on-click="applyJd" />
 		</vertical>
 	</modal>
