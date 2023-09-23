@@ -41,7 +41,7 @@ namespace JDHelper
         public string SetJDText => $"Set JD: {GetJumpDistance()} ({GetJumpDistanceDifference()})";
 
         [UIValue("rt")]
-        public string SetRTText => $"Set RT: {GetReactionTime()} ({GetReactionTimeDifference()})";
+        private string jdInput;
 
         [UIAction("keyModal")]
         public void OpenKeyboardModal() => ToggleModal();
